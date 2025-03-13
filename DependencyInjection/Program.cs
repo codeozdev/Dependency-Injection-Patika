@@ -25,6 +25,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+// bir controller olustuurlmadan minimal olarak bilgi gosterilmistir
 app.MapGet("/teacher", (ClassRoom classRoom) => Results.Ok((object?)classRoom.GetTeacherInfo()));
 
 app.Run();
